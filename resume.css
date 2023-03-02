@@ -1,37 +1,23 @@
 * {
     margin: 0; 
-}
+} /*set everything inti margin 0 */
 
 body {
     background-color: black;
     max-width: 1000px;
     margin-right: auto;
     margin-left: auto;
-    /* background: url('paper.gif'); */
     filter: blur();
-}
-
-.side-resume {
-    background-color: white
-}
-
-#linecolor {
-    background-color: yellow;
-    color: yellow;
-}
+}  /* set the body style */
 
 h1, h2 {
     color: rgb(68, 14, 112);
     margin: 10px 0px 10px 0px;
     text-transform:uppercase;
-}
+} /* set the text  */
 
 h2 {
     font-size: 22px;
-}
-
-li {
-    font-size: 18px;
 }
 
 h5, h4 {
@@ -39,9 +25,27 @@ h5, h4 {
     font-size: 18px;
 }
 
-.info-penting {
-    text-align: center;
+p {
+    font-size: 18px;
 }
+
+.side-resume {
+    background-color: white
+}  /* background all resume */
+
+.block {
+    display: flex;
+}  /* nak memisahkan belah kanan dan belah kiri  */
+
+.column1{
+    width: 35%;
+    background-color:rgb(187, 187, 187);
+    box-shadow: 7px 0px 8px 0px rgb(122, 122, 122);
+}  /* kanan */
+
+.column2 {
+    width: 70%;
+} /* kiri */
 
 img {
     border: 3px solid rgb(80, 80, 80);
@@ -57,7 +61,7 @@ img {
     animation-duration: 5s;
     animation-fill-mode: forwards;
     width: 53%;
-}
+} /* gambar bagi cantik */
 
 @keyframes gambar-profile {
     from {filter: blur(4px);}
@@ -65,53 +69,28 @@ img {
     to {filter: blur(0px);}
 }
 
-.block {
-    display: flex;
-}
-
 .title {
     text-align: justify;
     padding-left: 20px;
     padding-right: 20px;
     padding-top: 10px;
-}
+}  /* untuk semua text yg terlibat  */
 
 .title:hover {
     /* color: green; */
-    text-shadow: 0px 0px 2px rgb(122, 122, 122);
-}
-
-.column1{
-    width: 35%;
-    background-color:rgb(187, 187, 187);
-    box-shadow: 7px 0px 8px 0px rgb(122, 122, 122);
-}
-
-.column2 {
-    width: 70%;
-}
-
-.edu, .activity, .experience {
-    padding-left: 40px;
+    text-shadow: 0px 0px 1.5px rgb(122, 122, 122);
 }
 
 .skill span {
     display: inline-flex;
     width: 140px;
-}
+}  /* skill part ada letak bintang */
 
-footer {
-    background-color: purple;
-    color: transparent;
-    text-align: center;
-}
-
-p {
+li {
     font-size: 18px;
 }
 
 .fa-star {
-    /* color: yellow; */
     font-size: 14px;
 }
 
@@ -132,15 +111,39 @@ p {
     }
 }
 
+.email-kakmai {
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+
+.email-kakmai:hover {
+    overflow: visible;
+    word-wrap: break-word;
+}
+
+.info-penting {
+    text-align: center;
+}
+
 #nama {
     margin-top: 25px;
-    text-shadow: 0px 0px 3px rgb(121, 113, 71); /* 1-ketepi, 2-kebawah, 3-pecah2, last-color of shadow*/
+    text-shadow: 0px 0px 2px rgb(121, 113, 71); /* 1-ketepi, 2-kebawah, 3-pecah2, last-color of shadow*/
+}
+
+#nama:hover {
+    text-shadow: none;
 }
 
 @media (max-width: 600px){
     #nama {
         font-size: 8px;
     }
+}
+
+hr{
+    border-width: 0px;
+    box-shadow: 7px 0px 5px 2px rgb(121, 121, 121);
+    margin-bottom: 13px;
 }
 
 .box-media{
@@ -174,18 +177,6 @@ p {
     font-size: small;
     font-weight: bold;
     text-decoration: none;
-
-}
-
-
-/* #nama:hover {
-    text-shadow: 2px 2px 10px red;
-} */
-
-hr{
-    border-width: 0px;
-    box-shadow: 7px 0px 5px 2px rgb(121, 121, 121);
-    margin-bottom: 13px;
 }
 
 .link-media {
@@ -196,67 +187,16 @@ hr{
     color: purple;
 }
 
-.email-kakmai {
-    overflow: hidden;
-    text-overflow: ellipsis
+.edu, .activity, .experience {
+    padding-left: 40px;
 }
 
-.email-kakmai:hover {
-    overflow: visible;
-    word-wrap: break-word;
+.protege {
+    display: inline-block;
 }
 
-.ptag::before {
-    color: white;
-}
-
-.ptag::after {
-    color: black;
-}
-
-
-/* .link-profile:hover {
-    display: inline;
-    color:black;
-} */
-
-.animation {
-    position: relative;
+footer {
     background-color: purple;
-    writing-mode:horizontal-tb; /*ada vertical-rl juga*/
-    animation-name: saya;
-    animation-duration: 7s;
-    animation-delay: 2s; 
-    /* duration delay ni lambat sikit animation ni start */
-    animation-fill-mode: forwards; /*forward ni maksudnya dia kekal di kedudukan terakhir pergerakan
-    backwards pulak dia patah balik ke kedudukan asal dia.. both sama macam forwards*/
-}
-
-.animation2 {
-    position: relative;
-    background-color: purple;
-    animation-name: dia;
-    animation-duration: 7s;
-    box-shadow: 10px 10px 20px 2px cyan; /*shadow utk box: second last-berapa jauh selerakan 
-    multiple pun boleh tambah koma, yg last ada 'inset', itu inner shadow*/
-    animation-direction:alternate;  /* diabergerak ke depan pastu patah balik
-    kalau alternate-reverse dia kebelakang dulu baru ke dpn*/
-    animation-iteration-count: infinite;
-    /* animation-iteration-count ni berapa kali dia bergerak; */
-    animation-timing-function: linear; /*cara bergerak,, laju dulu ke sama laju ke?*/
-}
-
-@keyframes saya {
-    0%   {background-color: red;}
-    25%  {background-color: yellow;}
-    50%  {background-color: blue;}
-    100% {background-color: green;}
-}
-
-@keyframes dia {
-    0%   {background-color:red; left:0px; top:0px;}
-    25%  {background-color:yellow; left:200px; top:0px;}
-    50%  {background-color:blue; left:200px; top:200px;}
-    75%  {background-color:green; left:0px; top:200px;}
-    100% {background-color:red; left:0px; top:0px;}
+    color: transparent;
+    text-align: center;
 }
