@@ -203,13 +203,15 @@ footer {
 
 @media (max-width: 600px){
     #nama {
-        font-size: 10px;
+        font-size: 13px;
+        margin-top: 15px;
     }
     p, li, .social {
         font-size: 7px;
     }
     h2,h5,h4{
         font-size: 8px;
+        margin-bottom: 3px;
     }
     .fa-star {
         font-size: 7px;
@@ -217,12 +219,16 @@ footer {
     .skill span {
         display:inline-flex;
     }
-    ul,.edu, .activity, .experience {
+    ul {
         padding-left: 20px;
     }
     .title {
         padding-left: 10px;
         padding-right: 10px;
     }
+    .edu, .activity, .experience {
+        padding-left: 20px;
+    }
+    
 
 }
