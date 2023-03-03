@@ -209,7 +209,10 @@ footer {
     p, li, .social {
         font-size: 7px;
     }
-    h2,h5,h4{
+    h2 {
+        font-size: 10px;
+    }
+    h5,h4{
         font-size: 8px;
         margin-bottom: 3px;
     }
